@@ -5,7 +5,8 @@ class ClassComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            count: 0
+            count: 0,
+            name: ''
         }
         
     }
@@ -16,13 +17,15 @@ class ClassComponent extends Component {
     }
 
     componentDidUpdate(preProps, preState){
+        console.log('updating document title');
         document.title = `clicks ${this.state.count} times`
-        console.log(document.title);
+        
     }
     render() {
-        console.log('render');
+        
         return (
             <div>
+                <input type="text" value={this.state.name} onChange={ e => this.setState({name: this.state.value})}/>
                 <button onClick={() => this.setState({ count: this.state.count + 1 })}
                     style={{ padding: '30px' }}>
                     Click {this.state.count} Times </button>
