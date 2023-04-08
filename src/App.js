@@ -3,6 +3,7 @@ import './App.css';
 import ClassComponent from './ClassComponent';
 import HookCounterOne from './HookCounterOne';
 import IntervalCounter from './IntervalCounter';
+import DataFetching from './DataFetching';
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <div className="App">
     {/* <ClassComponent/> */}
     {/* <HookCounterOne/> */}
-    <IntervalCounter/>
+    {/* <IntervalCounter/> */}
+    <DataFetching/>
     </div>
   );
 }

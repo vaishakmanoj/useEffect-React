@@ -15,7 +15,7 @@ function IntervalCounter () {
             clearInterval(Interval)
             console.log('unmount');
         })
-     },[count] )
+     },[] )
 
     return(
         <div>{count}</div>
